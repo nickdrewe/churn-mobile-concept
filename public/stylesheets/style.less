@@ -1,19 +1,31 @@
 
 //palette
 @churngreen: #00b3a7;
+@churnpink: #f78ea8;
 @grey: #3c3f40;
 @lightgrey: #F0EDF0;
 @white: #FFF;
-@facebook: #3971CB;
 @twitter: #3FABDB;
 @red: #F03C40;
 
 //dimensions
 @menu-height: 50px;
 
+//media queries
+@iphone:    ~"only screen and (max-device-width : 320px)";
+
+//imports
+@import '../../bower_components/lesshat/build/lesshat';
+@import 'modules/nav';
+@import 'modules/feed';
+@import 'modules/search';
+@import 'modules/channel-list';
+
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
+	background-color: @lightgrey;
 }
 
 a {
@@ -37,276 +49,11 @@ a {
   }
 }
 
-
-.head{
-	
-	background-color: @grey;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: @menu-height;
-	z-index: 1;
-	.shadow;
-
-	.menu{
-		position: absolute;
-		top: 0;
-		left: -25;
-		display: inline-block;
-		height: 100%;
-		width: @menu-height;
-		text-align: center;
-
-
-		.menu-inner{
-			display: table;
-			width: 100%;
-			height: 100%;
-
-
-			.menu-icon{
-				display: table-cell;
-				vertical-align: middle;
-				font-size: 24;
-				color: @white;
-			}
-		}
-	}
-
-	.logo{
-		display: table;
-		height: @menu-height;
-		width: 100%;
-
-		.logo-inner{
-			display: table-cell;
-			text-align: left;
-			vertical-align: middle;
-			padding-left: 25px;
-
-			.logo-img{
-				height: 30px;
-				display: inline-block;
-				vertical-align: -4;
-			}
-			.logo-text{
-				font-size: 26px;
-				color: @white;
-				font-weight: 600;
-			}
-
-			.logo-subtext{
-				font-size: 12px;
-				font-weight: 300;
-				color: @white;
-			}
-		}
-	}
+.top-gap{
+	margin-top: @menu-height;
 }
 
-.feed{
-	padding-top: @menu-height;
-	background-color: @lightgrey;
-	//display: none;
 
-	.video{
-		background-color: @white;
-		margin-bottom: 20px;
-		.shadow;
-
-		.video-head{
-			.video-title{
-				padding: 5 7 0;
-				font-weight: 600;
-			}
-
-			.channel-title{
-				padding: 0 7 0;
-				font-size: 14px;
-				font-weight: 300;
-				color: @grey;
-			}
-		}
-
-		.video-body{
-
-			//YouTube responsive styling
-			.video-container {
-			    position: relative;
-			    //padding-bottom: 56.25%;
-			    padding-bottom: 47.5%;
-			    padding-top: 30px;
-			    height: 0;
-			    overflow: hidden;
-			}
-			 
-			.video-container iframe,
-			.video-container object,
-			.video-container embed {
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-			    width: 100%;
-			    height: 100%;
-			}
-		}
-
-		.video-tail{
-			padding: 5 7;
-
-			.share{
-
-				.share-buttons{
-					font-size: 0;
-					margin-bottom: 5px;
-
-					.share-button{
-						display: inline-block;
-						text-align: center;
-						font-size: 18px;
-						font-weight: 400;
-						line-height: 30px;
-						padding: 0 7 0 3;
-						color: @white;
-						margin-right: 5px;
-					}
-
-					.facebook{
-						background-color: @facebook;
-					}
-
-					.twitter{
-						background-color: @twitter;
-
-						.icon{
-							font-size: 16px;
-							margin-left: 2px;
-							margin-right: 2px;
-						}
-					}
-
-					.save{
-						background-color: @red;
-						font-size: 20px;
-						vertical-align: -1;
-
-					}
-				}
-
-			}
-
-			.video-description{
-				font-weight: 300;
-
-				.more{
-					display: inline-block;
-					color: @churngreen;
-
-					.icon{
-						margin: 0 -4;
-					}
-				}
-			}
-		}
-	}
-
-	.loader{
-		text-align: center;
-		font-size: 30;
-		color: @grey;
-		padding-bottom: 15px;
-	}
-}
-
-.channels{
-	padding-top: @menu-height;
-	background-color: @lightgrey;
-
-	.category{
-		padding: 5px;
-		font-size: 18px;
-		font-weight: 300;
-		background-color: lighten(@grey,15%);
-		color: @white;
-
-		border: 0;
-		border-bottom: 1px;
-		border-style: solid;
-		border-color: @grey;
-	}
-
-	.channel{
-		font-size: 0;
-		border: 0;
-		border-bottom: 1px;
-		border-style: solid;
-		border-color: @grey;
-
-		.channel-thumb{
-			display: inline-block;
-			width: 33.3%;
-			float: left;
-
-			.thumb{
-				width: 100%;
-			}
-		}
-
-		.channel-details{
-			float: right;
-			width: 66.6%;
-			//height: 100%;
-			display: table;
-			//padding: 5 0;
-
-			.channel-title{
-				//display: inline-block;
-				font-size: 16px;
-				margin: 0 5;
-			}
-
-			.channel-category{
-				font-size: 14px;
-				margin: 0 5;
-
-				.category-tag{
-					display: inline-block;
-					background-color: @grey;
-					color: @white;
-					line-height: 21px;
-					padding: 0 5;
-					font-weight: 300;
-				}
-			}
-
-			.channel-metrics{
-				margin: 0 3;
-
-				.channel-views{
-					display: inline-block;
-					font-size: 12px;
-
-					.icon{
-						margin-right: 2px;
-					}
-				}
-
-				.channel-shares{
-					display: inline-block;
-					font-size: 12px;
-					margin-left: 10px;
-
-					.icon{
-						font-size: 9px;
-						margin-right: 3px;
-						vertical-align: 1;
-					}
-				}
-			}
-		}
-	}
-}
 
 
 

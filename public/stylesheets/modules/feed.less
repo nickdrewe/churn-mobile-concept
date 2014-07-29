@@ -1,0 +1,123 @@
+.video{
+	background-color: @white;
+	margin-bottom: 20px;
+	.shadow;
+	.video-head{
+		.video-title{
+			padding: 5 7 0;
+			font-weight: 600;
+		}
+		.channel-title{
+			padding: 0 7 0;
+			font-size: 14px;
+			font-weight: 300;
+			color: @grey;
+		}
+	}
+	.video-body{
+		//YouTube responsive styling
+		.video-container {
+		    position: relative;
+		    //padding-bottom: 56.25%;
+		    padding-bottom: 47.5%;
+		    padding-top: 30px;
+		    height: 0;
+		    overflow: hidden;
+		}
+		 
+		.video-container iframe,
+		.video-container object,
+		.video-container embed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+	}
+	.video-tail{
+		padding: 5 7;
+		.share{
+			height: 30px;
+			margin-bottom: 4px;
+			display: inline-block;
+			.transform(scale(1.5));
+			.transform-origin(top left);
+			@media @iphone{
+				height: 28px;
+				.transform(scale(1.4));
+			}
+			.share-buttons{
+				font-size: 0;
+				display: inline-block;
+				margin-bottom: 5px;
+				.share-button{
+					display: inline-block;
+					text-align: center;
+					font-size: 11px;
+					font-weight: 600;
+					line-height: 20px;
+					padding: 0 4 0 1;
+					color: @white;
+					margin-right: 4px;
+					vertical-align: top;
+					border-radius: 2px;
+				}
+				.twitter{
+					background-color: @twitter;
+					.icon{
+						//vertical-align: 1px;
+						font-size: 11px;
+						margin-left: 1px;
+						margin-right: 1px;
+					}
+				}
+				.save{
+					background-color: @red;
+					.icon{
+						font-size: 12px;
+					}
+				}
+				.facebook-button{
+					display: inline-block;
+					margin-right: 4px;
+				}
+			}
+		}
+		.video-description{
+			font-weight: 300;
+			.more{
+				display: inline-block;
+				color: @churngreen;
+				.icon{
+					margin: 0 -4;
+				}
+			}
+		}
+	}
+}
+
+.feed-helper{
+	background-color: @churnpink;
+	height: @menu-height;
+	position: relative;
+	margin-bottom: 20px;
+	.shadow;
+
+	.helper-text{
+		font-size: 24px;
+		color: @white;
+		font-weight: 600;
+
+		@media @iphone{
+			font-size: 20px;
+		}
+	}
+}
+
+.loader{
+	text-align: center;
+	font-size: 30;
+	color: @grey;
+	padding-bottom: 15px;
+}

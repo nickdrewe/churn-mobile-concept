@@ -1,0 +1,146 @@
+.info-card{
+	padding: 10px;
+	font-weight: 300;
+
+	.info-text{
+		overflow: hidden;
+	}
+
+	.sign-in{
+		float: right;
+		display: table;
+
+		.sign-in-button{
+			vertical-align: middle;
+			display: table-cell;
+			background-color: @churngreen;
+			color: @white;
+			font-weight: 400;
+			font-size: 16px;
+			padding: 0 12;
+			line-height: 35px;
+		}
+	}
+}
+
+.feed-title{
+	font-size: 14px;
+	color: @grey;
+	padding: 5;
+	text-shadow: 1px 1px 1px rgba(150, 150, 150, .5);
+
+	.icon{
+		margin-right: 3px;
+	}
+}
+
+.channels{
+	background-color: @lightgrey;
+
+	.category{
+		background-color: @white;
+		margin-bottom: 20px;
+
+		.shadow;
+
+		.title{
+			position: relative;
+			padding: 5px;
+			font-weight: 400;
+			font-size: 18;
+
+			border: 0;
+			border-bottom: 1px;
+			border-style: solid;
+			border-color: lighten(@grey, 70%);
+
+			.title-tag{
+				background-color: @churnpink;
+				display: inline-block;
+				color: @white;
+				padding: 0 4;
+				font-weight: 600;
+			}
+		}
+
+		.channel-list{
+
+			.channel{
+				font-size: 0;
+				border: 0;
+				border-bottom: 1px;
+				border-style: solid;
+				border-color: lighten(@grey, 70%);
+
+				.channel-thumb{
+					display: inline-block;
+					width: 33.3%;
+					float: left;
+
+					.thumb{
+						width: 100%;
+					}
+				}
+
+				.channel-details{
+					float: right;
+					width: 66.6%;
+					//height: 100%;
+					display: table;
+					//padding: 5 0;
+
+					.channel-title{
+						//display: inline-block;
+						font-size: 16px;
+						margin: 0 5;
+					}
+
+					.channel-category{
+						font-size: 14px;
+						margin: 0 5;
+
+						.category-tag{
+							display: inline-block;
+							background-color: @grey;
+							color: @white;
+							line-height: 21px;
+							padding: 0 5;
+							font-weight: 300;
+						}
+					}
+
+					.channel-metrics{
+						margin: 0 3;
+						color: lighten(@grey, 0%);
+
+						.channel-views{
+							display: inline-block;
+							font-size: 12px;
+
+							.icon{
+								margin-right: 2px;
+							}
+						}
+
+						.channel-shares{
+							display: inline-block;
+							font-size: 12px;
+							margin-left: 10px;
+
+							.icon{
+								font-size: 9px;
+								margin-right: 3px;
+								vertical-align: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.more-channels{
+			padding: 10 7;
+			color: @grey;
+		}
+	}
+}

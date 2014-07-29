@@ -12,308 +12,252 @@
 </head>
 
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=600164226766852&version=v2.0";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="head">
-	<div class="menu">
-		<div class="menu-inner">
-			<div class="menu-icon">
-				<i class="icon-menu"></i>
+	<a href="channels.html">
+		<div class="menu">
+			<div class="menu-inner">
+				<div class="menu-icon">
+					<i class="icon-menu"></i>
+				</div>
 			</div>
 		</div>
+		<div class="logo">
+			<div class="logo-inner">
+				<img class="logo-img" src="images/logo.png"/>
+				<span class="logo-text">Churn</span>
+				<span class="logo-subtext">Endless Channels Of Video</span>
+			</div>
+		</div>
+	</a>
+	<a href="search.html">
+		<div class="search-button">
+			<div class="icon">
+				<i class="icon-search"></i>
+			</div>
+		</div>
+	</a>
+</div>
+
+<div class="top-gap"></div>
+
+<div class="video">
+	<div class="video-body">
+		<div class="video-container">
+			<iframe src="//www.youtube.com/embed/ZmZKb4uVUBA?rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
 	</div>
-	<div class="logo">
-		<div class="logo-inner">
-			<img class="logo-img" src="images/logo.png"/>
-			<span class="logo-text">Churn</span>
-			<span class="logo-subtext">Endless Channels Of Video</span>
+	<div class="video-head">
+		<div class="video-title">
+			2Pac - Old School (Cookin Soul Remix)
+		</div>
+		<div class="channel-title">
+			Sound Is Style
+		</div>
+	</div>
+	<div class="video-tail">
+		<div class="share">
+			<div class="share-buttons">
+				<div class="facebook-button">
+					<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+				<!-- <div class="share-button facebook">
+					<i class="icon-facebook"></i>
+					<span class="share-label">
+						Share
+					</span>
+				</div> -->
+				<div class="share-button twitter">
+					<i class="icon-twitter-bird icon"></i>
+					<span class="share-label">
+						Tweet
+					</span>
+				</div>
+				<div class="share-button save">
+					<i class="icon-plus icon"></i>
+					<span class="share-label">
+						Save
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="video-description">
+			Video description text goes down here. It might need to be a little bit longer that that for some reason. Plus a bit more.
+			<div class="more"><i class="icon-down-dir icon"></i>More</div>
+		</div>
+	</div>
+</div>
+<div class="video">
+	<div class="video-body">
+		<div class="video-container">
+			<iframe src="//www.youtube.com/embed/WLQJW_javqQ?rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="video-head">
+		<div class="video-title">
+			Thief - Closer (Akouo Remix)
+		</div>
+		<div class="channel-title">
+			Sound Is Style
+		</div>
+	</div>
+	<div class="video-tail">
+		<div class="share">
+			<div class="share-buttons">
+				<div class="facebook-button">
+					<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+				<!-- <div class="share-button facebook">
+					<i class="icon-facebook"></i>
+					<span class="share-label">
+						Share
+					</span>
+				</div> -->
+				<div class="share-button twitter">
+					<i class="icon-twitter-bird icon"></i>
+					<span class="share-label">
+						Tweet
+					</span>
+				</div>
+				<div class="share-button save">
+					<i class="icon-plus icon"></i>
+					<span class="share-label">
+						Save
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="video-description">
+			Video description text goes down here. It might need to be a little bit longer that that for some reason. Plus a bit more.
+			<div class="more"><i class="icon-down-dir icon"></i>More</div>
 		</div>
 	</div>
 </div>
 
-<div class="feed">
-	<div class="video">
-		<div class="video-body">
-			<div class="video-container">
-				<iframe src="//www.youtube.com/embed/ZmZKb4uVUBA?rel=0" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-		<div class="video-head">
-			<div class="video-title">
-				2Pac - Old School (Cookin Soul Remix)
-			</div>
-			<div class="channel-title">
-				Sound Is Style
-			</div>
-		</div>
-		<div class="video-tail">
-			<div class="share">
-				<div class="share-buttons">
-					<div class="share-button facebook">
-						<i class="icon-facebook"></i>
-						<span class="share-label">
-							Share
-						</span>
-					</div>
-					<div class="share-button twitter">
-						<i class="icon-twitter-bird icon"></i>
-						<span class="share-label">
-							Tweet
-						</span>
-					</div>
-					<div class="share-button save">
-						<i class="icon-plus icon"></i>
-						<span class="share-label">
-							Save
-						</span>
-					</div>
+<!-- Feed helper -->
+<div class="feed-helper">
+	<a href="channels.html">
+		<div class="menu">
+			<div class="menu-inner">
+				<div class="menu-icon">
+					<i class="icon-menu"></i>
 				</div>
 			</div>
-			<div class="video-description">
-				Video description text goes down here. It might need to be a little bit longer that that for some reason. Plus a bit more.
-				<div class="more"><i class="icon-down-dir icon"></i>More</div>
+		</div>
+		<div class="logo">
+			<div class="logo-inner">
+				<img class="logo-img" src="images/logo.png"/>
+				<span class="helper-text">Discover more channels</span>
+				<!-- <span class="logo-subtext">More great channels</span> -->
 			</div>
 		</div>
-	</div>
-	<div class="video">
-		<div class="video-body">
-			<div class="video-container">
-				<iframe src="//www.youtube.com/embed/WLQJW_javqQ?rel=0" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-		<div class="video-head">
-			<div class="video-title">
-				Thief - Closer (Akouo Remix)
-			</div>
-			<div class="channel-title">
-				Sound Is Style
-			</div>
-		</div>
-		<div class="video-tail">
-			<div class="share">
-				<div class="share-buttons">
-					<div class="share-button facebook">
-						<i class="icon-facebook"></i>
-						<span class="share-label">
-							Share
-						</span>
-					</div>
-					<div class="share-button twitter">
-						<i class="icon-twitter-bird icon"></i>
-						<span class="share-label">
-							Tweet
-						</span>
-					</div>
-					<div class="share-button save">
-						<i class="icon-plus icon"></i>
-						<span class="share-label">
-							Save
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="video-description">
-				Video description text goes down here. It might need to be a little bit longer that that for some reason. Plus a bit more.
-				<div class="more"><i class="icon-down-dir icon"></i>More</div>
-			</div>
-		</div>
-	</div>
-	<div class="loader">
-		<i class="icon-spin1 animate-spin"></i>
-	</div>
+	</a>
 </div>
 
-<div class="channels">
-	<div class="category">
-		Entertainment
-	</div>
-	<div class="channel group">
-		<div class="channel-thumb">
-			<img class="thumb" src="http://i1.ytimg.com/vi/ap9_jxEr_JA/mqdefault.jpg"/>
-		</div>
-		<div class="channel-details">
-			<div class="channel-title">
-				Shock Mansion
-			</div>
-			<div class="channel-category">
-				<div class="category-tag">
-					#Entertainment
-				</div>
-			</div>
-			<div class="channel-metrics">
-				<div class="channel-views">
-					<i class="icon-eye icon"></i>2,736
-				</div>
-				<div class="channel-shares">
-					<i class="icon-rss icon"></i>368
-				</div>
-			</div>
+<div class="video">
+	<div class="video-body">
+		<div class="video-container">
+			<iframe src="//www.youtube.com/embed/5Hln3QCyXec?rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
-	<div class="channel group">
-		<div class="channel-thumb">
-			<img class="thumb" src="http://i1.ytimg.com/vi/ZJUfiEFh1w4/mqdefault.jpg"/>
+	<div class="video-head">
+		<div class="video-title">
+			Broke For Free - Summer Spliffs
 		</div>
-		<div class="channel-details">
-			<div class="channel-title">
-				The Kids Should See This
-			</div>
-			<div class="channel-category">
-				<div class="category-tag">
-					#Science
-				</div>
-			</div>
-			<div class="channel-metrics">
-				<div class="channel-views">
-					<i class="icon-eye icon"></i>2,736
-				</div>
-				<div class="channel-shares">
-					<i class="icon-rss icon"></i>368
-				</div>
-			</div>
+		<div class="channel-title">
+			Sound Is Style
 		</div>
 	</div>
-	<div class="channel group">
-		<div class="channel-thumb">
-			<img class="thumb" src="http://i1.ytimg.com/vi/oVP26Ii9eys/mqdefault.jpg"/>
-		</div>
-		<div class="channel-details">
-			<div class="channel-title">
-				Devour - Videos Worth Watching
-			</div>
-			<div class="channel-category">
-				<div class="category-tag">
-					#Entertainment
+	<div class="video-tail">
+		<div class="share">
+			<div class="share-buttons">
+				<div class="facebook-button">
+					<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 				</div>
-			</div>
-			<div class="channel-metrics">
-				<div class="channel-views">
-					<i class="icon-eye icon"></i>2,736
+				<!-- <div class="share-button facebook">
+					<i class="icon-facebook"></i>
+					<span class="share-label">
+						Share
+					</span>
+				</div> -->
+				<div class="share-button twitter">
+					<i class="icon-twitter-bird icon"></i>
+					<span class="share-label">
+						Tweet
+					</span>
 				</div>
-				<div class="channel-shares">
-					<i class="icon-rss icon"></i>368
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="channel group">
-		<div class="channel-thumb">
-			<img class="thumb" src="http://i1.ytimg.com/vi/69g7uu5LkC4/mqdefault.jpg"/>
-		</div>
-		<div class="channel-details">
-			<div class="channel-title">
-				Pet Flow
-			</div>
-			<div class="channel-category">
-				<div class="category-tag">
-					#Pets & Animals
-				</div>
-			</div>
-			<div class="channel-metrics">
-				<div class="channel-views">
-					<i class="icon-eye icon"></i>2,736
-				</div>
-				<div class="channel-shares">
-					<i class="icon-rss icon"></i>368
+				<div class="share-button save">
+					<i class="icon-plus icon"></i>
+					<span class="share-label">
+						Save
+					</span>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="category">
-		Another Category
-	</div>
-	<div class="channel group">
-		<div class="channel-thumb">
-			<img class="thumb" src="http://i1.ytimg.com/vi/ap9_jxEr_JA/mqdefault.jpg"/>
-		</div>
-		<div class="channel-details">
-			<div class="channel-title">
-				Shock Mansion
-			</div>
-			<div class="channel-category">
-				<div class="category-tag">
-					#Entertainment
-				</div>
-			</div>
-			<div class="channel-metrics">
-				<div class="channel-views">
-					<i class="icon-eye icon"></i>2,736
-				</div>
-				<div class="channel-shares">
-					<i class="icon-rss icon"></i>368
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="channel group">
-		<div class="channel-thumb">
-			<img class="thumb" src="http://i1.ytimg.com/vi/ZJUfiEFh1w4/mqdefault.jpg"/>
-		</div>
-		<div class="channel-details">
-			<div class="channel-title">
-				The Kids Should See This
-			</div>
-			<div class="channel-category">
-				<div class="category-tag">
-					#Science
-				</div>
-			</div>
-			<div class="channel-metrics">
-				<div class="channel-views">
-					<i class="icon-eye icon"></i>2,736
-				</div>
-				<div class="channel-shares">
-					<i class="icon-rss icon"></i>368
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="channel group">
-		<div class="channel-thumb">
-			<img class="thumb" src="http://i1.ytimg.com/vi/oVP26Ii9eys/mqdefault.jpg"/>
-		</div>
-		<div class="channel-details">
-			<div class="channel-title">
-				Devour - Videos Worth Watching
-			</div>
-			<div class="channel-category">
-				<div class="category-tag">
-					#Entertainment
-				</div>
-			</div>
-			<div class="channel-metrics">
-				<div class="channel-views">
-					<i class="icon-eye icon"></i>2,736
-				</div>
-				<div class="channel-shares">
-					<i class="icon-rss icon"></i>368
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="channel group">
-		<div class="channel-thumb">
-			<img class="thumb" src="http://i1.ytimg.com/vi/69g7uu5LkC4/mqdefault.jpg"/>
-		</div>
-		<div class="channel-details">
-			<div class="channel-title">
-				Pet Flow
-			</div>
-			<div class="channel-category">
-				<div class="category-tag">
-					#Pets & Animals
-				</div>
-			</div>
-			<div class="channel-metrics">
-				<div class="channel-views">
-					<i class="icon-eye icon"></i>2,736
-				</div>
-				<div class="channel-shares">
-					<i class="icon-rss icon"></i>368
-				</div>
-			</div>
+		<div class="video-description">
+			Video description text goes down here. It might need to be a little bit longer that that for some reason. Plus a bit more.
+			<div class="more"><i class="icon-down-dir icon"></i>More</div>
 		</div>
 	</div>
 </div>
-
+<div class="video">
+	<div class="video-body">
+		<div class="video-container">
+			<iframe src="//www.youtube.com/embed/U7fwQoO3kaU?rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="video-head">
+		<div class="video-title">
+			AYER - Circle Down (Keljet Remix)
+		</div>
+		<div class="channel-title">
+			Sound Is Style
+		</div>
+	</div>
+	<div class="video-tail">
+		<div class="share">
+			<div class="share-buttons">
+				<div class="facebook-button">
+					<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+				<!-- <div class="share-button facebook">
+					<i class="icon-facebook"></i>
+					<span class="share-label">
+						Share
+					</span>
+				</div> -->
+				<div class="share-button twitter">
+					<i class="icon-twitter-bird icon"></i>
+					<span class="share-label">
+						Tweet
+					</span>
+				</div>
+				<div class="share-button save">
+					<i class="icon-plus icon"></i>
+					<span class="share-label">
+						Save
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="video-description">
+			Video description text goes down here. It might need to be a little bit longer that that for some reason. Plus a bit more.
+			<div class="more"><i class="icon-down-dir icon"></i>More</div>
+		</div>
+	</div>
+</div>
+<div class="loader">
+	<i class="icon-spin1 animate-spin"></i>
+</div>
 
 </body>
 

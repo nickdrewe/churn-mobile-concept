@@ -1,0 +1,20 @@
+{
+  "name": "churn-mobile-concept",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nickdrewe/churn-mobile-concept",
+  "authors": [
+    "nickdrewe <nick.drewe@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lesshat": "~3.0.2"
+  }
+}

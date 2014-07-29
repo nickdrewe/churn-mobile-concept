@@ -1,0 +1,150 @@
+.head{
+	
+	background-color: @grey;
+	height: @menu-height;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	
+	z-index: 1;
+	.shadow;
+
+	
+}
+
+.menu{
+	position: absolute;
+	top: 0;
+	left: -25;
+	display: inline-block;
+	height: 100%;
+	width: @menu-height;
+	text-align: center;
+
+
+	.menu-inner{
+		display: table;
+		width: 100%;
+		height: 100%;
+
+
+		.menu-icon{
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 24;
+			color: @white;
+		}
+
+		.back-icon{
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 24;
+			color: @white;
+		}
+	}
+}
+
+.back{
+	left: -20;
+}
+
+.logo{
+	display: table;
+	height: @menu-height;
+	//width: 100%;
+
+	.logo-inner{
+		display: table-cell;
+		text-align: left;
+		vertical-align: middle;
+		padding-left: 25px;
+
+		.logo-img{
+			height: 30px;
+			display: inline-block;
+			vertical-align: -3;
+
+			@media @iphone{
+				height: 25px;
+			}
+		}
+
+		.logo-text{
+			font-size: 26px;
+			color: @white;
+			font-weight: 600;
+
+			@media @iphone{
+				font-size: 24px;
+			}
+		}
+
+		.logo-subtext{
+			font-size: 12px;
+			font-weight: 300;
+			color: @white;
+
+			@media @iphone{
+				font-size: 11px;
+			}
+		}
+	}
+
+	.search{
+		padding-left: 8px;
+	}
+}
+
+.search-button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: @menu-height;
+	width: @menu-height;
+	display: table;
+
+	.icon{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: darken(@white, 50%);
+		font-size: 18px;
+	}
+}
+
+//Search bar styling
+
+.search-container{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50;
+	right: 50;
+
+	@media @iphone{
+		left: 40;
+	}
+
+	.search-input{
+		width: 100%;
+		border: 0;
+		padding: 0;
+		background: transparent;
+		color: white;
+		font-size: 20px;
+		margin-top: 11px;
+
+		&:focus{ outline:none };
+
+		@media @iphone{
+			font-size: 18px;
+			margin-top: 13px;
+		}
+	}
+
+	.underline{
+		height: 2px;
+		background-color: darken(@churngreen,10%);
+	}
+}
