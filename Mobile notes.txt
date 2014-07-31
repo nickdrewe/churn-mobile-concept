@@ -1,11 +1,8 @@
 Node
 - User agent checker
 
-Channel menu
- - top info card + login button
-
 Channel
-- Helper card (more channels)
+- Helper card (Like Churn)
 - Save modal
 
 

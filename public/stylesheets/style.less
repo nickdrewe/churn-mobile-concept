@@ -3,7 +3,8 @@
 @churngreen: #00b3a7;
 @churnpink: #f78ea8;
 @grey: #3c3f40;
-@lightgrey: #F0EDF0;
+@lightgrey: #dcdcdc;
+@mediumgrey: #999;
 @white: #FFF;
 @twitter: #3FABDB;
 @red: #F03C40;
@@ -20,6 +21,8 @@
 @import 'modules/feed';
 @import 'modules/search';
 @import 'modules/channel-list';
+@import 'modules/save-modal';
+
 
 
 body {
@@ -33,7 +36,7 @@ a {
 }
 
 .shadow{
-	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.36);
 }
 
 .group {
@@ -49,11 +52,20 @@ a {
   }
 }
 
+.border-box {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 .top-gap{
 	margin-top: @menu-height;
 }
 
 
+.hidden{
+  display: none;
+}
 
 
 

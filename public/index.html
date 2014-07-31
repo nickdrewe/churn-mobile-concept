@@ -9,6 +9,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.2/fastclick.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="javascripts/demo.js"></script>
+
 </head>
 
 <body>
@@ -82,7 +86,7 @@
 						Tweet
 					</span>
 				</div>
-				<div class="share-button save">
+				<div class="share-button save" onclick="showSave()">
 					<i class="icon-plus icon"></i>
 					<span class="share-label">
 						Save
@@ -128,7 +132,7 @@
 						Tweet
 					</span>
 				</div>
-				<div class="share-button save">
+				<div class="share-button save" onclick="showSave()">
 					<i class="icon-plus icon"></i>
 					<span class="share-label">
 						Save
@@ -163,6 +167,13 @@
 	</a>
 </div>
 
+<div class="feed-helper">
+	<div class="like">
+		<div class="fb-like" data-href="https://www.facebook.com/churntv" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+	</div>
+	<span class="helper-text">Churn on Facebook</span>
+</div>
+
 <div class="video">
 	<div class="video-body">
 		<div class="video-container">
@@ -195,7 +206,7 @@
 						Tweet
 					</span>
 				</div>
-				<div class="share-button save">
+				<div class="share-button save" onclick="showSave()">
 					<i class="icon-plus icon"></i>
 					<span class="share-label">
 						Save
@@ -241,7 +252,7 @@
 						Tweet
 					</span>
 				</div>
-				<div class="share-button save">
+				<div class="share-button save" onclick="showSave()">
 					<i class="icon-plus icon"></i>
 					<span class="share-label">
 						Save
@@ -257,6 +268,164 @@
 </div>
 <div class="loader">
 	<i class="icon-spin1 animate-spin"></i>
+</div>
+
+<div class="modal-bg modal-save hidden">
+	<div class="modal">
+		<div class="category rounded">
+			<div class="title">
+				<div class="title-text">
+					Save video to a channel
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="channel-list list-height-300">
+				<div class="channel" onclick="showSaved()">
+					<div class="channel-thumb">
+						<img class="thumb" src="http://i1.ytimg.com/vi/ap9_jxEr_JA/mqdefault.jpg"/>
+					</div>
+					<div class="channel-details">
+						<div class="channel-title">
+							Shock Mansion
+						</div>
+						<div class="channel-metrics">
+							<div class="channel-views">
+								2,736 views
+							</div>
+							<div class="channel-shares">
+								368 shares
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="channel" onclick="showSaved()">
+					<div class="channel-thumb">
+						<img class="thumb" src="http://i1.ytimg.com/vi/ap9_jxEr_JA/mqdefault.jpg"/>
+					</div>
+					<div class="channel-details">
+						<div class="channel-title">
+							Shock Mansion
+						</div>
+						<div class="channel-metrics">
+							<div class="channel-views">
+								2,736 views
+							</div>
+							<div class="channel-shares">
+								368 shares
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="channel" onclick="showSaved()">
+					<div class="channel-thumb">
+						<img class="thumb" src="http://i1.ytimg.com/vi/ap9_jxEr_JA/mqdefault.jpg"/>
+					</div>
+					<div class="channel-details">
+						<div class="channel-title">
+							Shock Mansion
+						</div>
+						<div class="channel-metrics">
+							<div class="channel-views">
+								2,736 views
+							</div>
+							<div class="channel-shares">
+								368 shares
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="channel" onclick="showSaved()">
+					<div class="channel-thumb">
+						<img class="thumb" src="http://i1.ytimg.com/vi/ap9_jxEr_JA/mqdefault.jpg"/>
+					</div>
+					<div class="channel-details">
+						<div class="channel-title">
+							Shock Mansion
+						</div>
+						<div class="channel-metrics">
+							<div class="channel-views">
+								2,736 views
+							</div>
+							<div class="channel-shares">
+								368 shares
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="channel group" onclick="showSaved()">
+					<div class="channel-thumb">
+						<img class="thumb" src="http://i1.ytimg.com/vi/ap9_jxEr_JA/mqdefault.jpg"/>
+					</div>
+					<div class="channel-details">
+						<div class="channel-title">
+							Shock Mansion
+						</div>
+						<div class="channel-metrics">
+							<div class="channel-views">
+								2,736 views
+							</div>
+							<div class="channel-shares">
+								368 shares
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="channel group" onclick="showNew()">
+					<div class="channel-thumb">
+						<img class="thumb" src="http://i.imgur.com/jMosBJD.jpg"/>
+					</div>
+					<div class="channel-details">
+						<div class="channel-title">
+							Start a new channel
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="new-channel-button" onclick="showNew()">
+				+ Start a new channel
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-bg modal-new hidden">
+	<div class="modal">
+		<div class="new-channel rounded">
+			<div class="title">
+				<div class="title-text">
+					New channel
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="new-channel-name">
+				<input class="new-channel-input" placeholder="Give your channel a name"></input>
+			</div>
+			<div class="line"></div>
+			<div class="buttons">
+				<div class="button cancel separator">
+					Cancel
+				</div>
+				<div class="button" onclick="showSaved()">
+					Ok
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="saved-outer hidden">
+	<div class="saved-inner">
+		<div class="saved">
+			<div class="saved-icon"><i class="icon-ok"></i></div>
+			<div class="saved-text">Saved</div>
+		</div>
+	</div>
 </div>
 
 </body>

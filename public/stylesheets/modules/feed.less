@@ -4,14 +4,14 @@
 	.shadow;
 	.video-head{
 		.video-title{
-			padding: 5 7 0;
-			font-weight: 600;
+			padding: 8 8 0;
+			font-weight: 400;
 		}
 		.channel-title{
-			padding: 0 7 0;
+			padding: 0 8 0;
 			font-size: 14px;
 			font-weight: 300;
-			color: @grey;
+			color: @mediumgrey;
 		}
 	}
 	.video-body{
@@ -36,13 +36,13 @@
 		}
 	}
 	.video-tail{
-		padding: 5 7;
+		padding: 8;
 		.share{
-			height: 30px;
-			margin-bottom: 4px;
+			height: 36px;
 			display: inline-block;
 			.transform(scale(1.5));
 			.transform-origin(top left);
+
 			@media @iphone{
 				height: 28px;
 				.transform(scale(1.4));
@@ -102,7 +102,22 @@
 	height: @menu-height;
 	position: relative;
 	margin-bottom: 20px;
+	line-height: @menu-height;
+
 	.shadow;
+
+	.like{
+		margin-left: 10px;
+		width: 76px;
+		height: 40px;
+		display: inline-block;
+		vertical-align: 3;
+		
+		.fb-like{
+			.transform(scale(1.5));
+			.transform-origin(top left);
+		}
+	}
 
 	.helper-text{
 		font-size: 24px;
