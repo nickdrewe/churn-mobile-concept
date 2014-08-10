@@ -1,9 +1,6 @@
 Node
 - User agent checker
 
-Channel
-- Helper card (Like Churn)
-- Save modal
 
 
 

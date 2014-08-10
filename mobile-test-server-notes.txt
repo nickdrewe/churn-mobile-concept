@@ -1,0 +1,174 @@
+- Keys on dropbox/keys/churn-aws.pem
+- Server IP: Dynamic
+- SSH via terminal: ssh -i ~/.ssh/memebig-aws.pem ubuntu@[IP ADDRESS]
+
+
+Install Node
+https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+============
+
+# Update package index
+$ sudo apt-get update
+
+# Install node
+$ sudo apt-get install nodejs
+y
+
+# Install nodejs-legacy (use 'node' command instead of 'nodejs')
+$ sudo apt-get install nodejs-legacy
+
+# Install NPM
+$ sudo apt-get install npm
+y
+
+
+Install Git
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04
+===========
+
+# Install Git
+$ sudo apt-get install git
+y
+
+
+Configure Git
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04
+===========
+
+# Configure Git
+$ git config --global user.name "Nick Drewe"
+$ git config --global user.email "nick.drewe@gmail.com"
+
+# Check config
+$ git config --list
+
+
+Generate Github SSH key
+https://help.github.com/articles/generating-ssh-keys
+============
+# generate a new SSH key
+$ ssh-keygen -t rsa -C "nick.drewe@gmail.com"
+[return]
+[return]
+[return]
+
+#Add new key to the ssh-agent
+# start the ssh-agent in the background
+
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+
+# Copy key to clipboard (use 'vi' nano doesn't print multi lines)
+$ sudo vi ~/.ssh/id_rsa.pub
+
+# Paste into Github
+https://github.com/settings/ssh
+
+# Test it
+$ ssh -T git@github.com
+
+
+Set environment variables
+============
+# Open .bash_profile for editing
+$ sudo nano ~/.bash_profile
+
+# Paste Envirnment Variables
+
+	### Churn
+	export CH_CDN=http://localhost:3000
+	export CH_API=http://api.churn.tv
+	export CH_PUBLIC=dist
+
+[ctrl + x]
+y
+[return]
+
+# Set env
+$ . ~/.bash_profile
+
+
+Create directories for Git repos
+==========
+
+# Navigate to /var & create node directory
+$ cd /var
+$ sudo mkdir node
+
+# Become the owner
+$ sudo chown ubuntu:ubuntu node
+
+# Go to there
+$ cd node
+
+Clone Git repos
+==========
+# clone ChurnTV
+$ git clone git@github.com:matt-way/ChurnTV.git
+
+
+Run NPM and Bower
+==========
+$ cd ChurnTV
+
+# Install Bower
+$ sudo npm install -g bower
+
+$ npm install
+$ bower install
+n
+
+Install Forever
+==========
+# Install forever
+$ sudo npm -g install forever
+
+Create Upstart scripts
+==========
+# navigate to /etc/init/
+$ cd /etc/init/
+$ sudo nano churntv.conf
+
+# Paste:
+
+	#!upstart
+	description "ChurnTV Server"
+	author "Churn Bot"
+
+	# start on every run level, 2 is the one on Ubuntu
+	start on runlevel [2345]
+
+	# stop on halt, maintenance or reboot
+	stop on runlevel [016]
+
+	# start our application with the user `user`
+	exec sudo -u ubuntu -i forever start /var/node/ChurnTV/app.js
+
+	# starting log
+	pre-start script
+	  echo "[`date -u +%Y-%m-%dT%T.%3NZ`] (sys) Starting"
+	end script
+
+[ctrl + x]
+y
+[return]
+
+
+
+Start Servers
+==========
+# Start App
+$ sudo start churntv
+
+# List what's running
+$ forever list
+
+# Stop everything
+$ forever stopall
+
+
+
+
+
+
+
