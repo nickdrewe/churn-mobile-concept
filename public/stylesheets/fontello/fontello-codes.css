@@ -1,4 +1,6 @@
 
+.icon-code:before { content: '\61'; } /* 'a' */
+.icon-child:before { content: '\63'; } /* 'c' */
 .icon-facebook:before { content: '\e800'; } /* '' */
 .icon-twitter-bird:before { content: '\e801'; } /* '' */
 .icon-menu:before { content: '\e802'; } /* '' */
@@ -13,3 +15,6 @@
 .icon-youtube-play:before { content: '\e80b'; } /* '' */
 .icon-left-open:before { content: '\e80c'; } /* '' */
 .icon-ok:before { content: '\e80d'; } /* '' */
+.icon-play:before { content: '\e80e'; } /* '' */
+.icon-right-open:before { content: '\e80f'; } /* '' */
+.icon-tv:before { content: '\e810'; } /* '' */
