@@ -13,10 +13,20 @@ function showNew(){
 	$('.modal-save').hide();
 }
 
-//show saved alert and face
+//show saved alert and fade
 function showSaved(){
 	$('.modal-save').hide();
 	$('.modal-new').hide();
-	$('.saved-outer').css('display', 'table').delay(500).fadeOut();;
+	$('.alert-outer').css('display', 'table').delay(500).fadeOut();
+	$('.saved').css('display', 'inline-block').delay(500).fadeOut();
 }
+
+//show saved alert and fade
+function showFailed(){
+	$('.modal-save').hide();
+	$('.modal-new').hide();
+	$('.alert-outer').css('display', 'table').delay(1500).fadeOut();
+	$('.failed').css('display', 'inline-block').delay(1500).fadeOut();
+}
+
 
